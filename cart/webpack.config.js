@@ -13,6 +13,8 @@ module.exports = {
       exposes: {
         './CartShow': './src/index',
       },
+      // when module deferations use `shared: ['faker']`, make sure both use the same version as when versions are different webpack endup loading both copies as they're different versions
+      shared: ['faker']
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
