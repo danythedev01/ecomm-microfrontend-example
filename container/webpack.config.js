@@ -8,8 +8,10 @@ module.exports = {
     plugins: [
         new ModuleFederationPlugin({
             name: 'container',
+            // <produduct> must match with what's contained in src/bootstrap.js: `import 'products/ProductsIndex';`
             remotes: {
-                products: 'products@http://localhost:8081/remoteEntry.js'
+                products: 'products@http://localhost:8081/remoteEntry.js',
+                cart: 'cart@http://localhost:8082/remoteEntry.js'
             }
         }),
         new HtmlWebpackPlugging({
