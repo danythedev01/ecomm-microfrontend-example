@@ -8,6 +8,7 @@ module.exports = {
     plugins: [
         new ModuleFederationPlugin({
             name: 'products',
+            // it lists different modules than can be loaded from the Products project
             filename: 'remoteEntry.js',
             exposes: {
                 './ProductsIndex': './src/index'
