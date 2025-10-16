@@ -11,9 +11,14 @@ module.exports = {
             // it lists different modules than can be loaded from the Products project
             filename: 'remoteEntry.js',
             exposes: {
-                './ProductsIndex': './src/index'
+                './ProductsIndex': './src/bootstrap'
             },
             shared: ['faker']
+            // shared: {
+            //     faker: {
+            //     singleton: true
+            //     }
+            // }
         }),
         new HtmlWebpackPlugging({
             template: './public/index.html'
