@@ -72,7 +72,7 @@ Folder structure:
 
 ## ⚙️ Webpack Configuration
 
-Cada microfrontend define su propio `webpack.config.js`:
+Each microfrontend defines its own `webpack.config.js`:
 ```js
 new ModuleFederationPlugin({
     name: 'cart',
