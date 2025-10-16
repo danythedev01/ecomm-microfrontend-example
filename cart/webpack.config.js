@@ -11,7 +11,7 @@ module.exports = {
       name: 'cart',
       filename: 'remoteEntry.js',
       exposes: {
-        './CartShow': './src/index',
+        './CartShow': './src/bootstrap',
       },
       // when module deferations use `shared: ['faker']`, make sure both use the same version as when versions are different webpack endup loading both copies as they're different versions
       shared: ['faker']

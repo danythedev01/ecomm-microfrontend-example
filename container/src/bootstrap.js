@@ -1,6 +1,7 @@
-import { mount } from 'products/ProductsIndex';
+import { mount as productsMount } from 'products/ProductsIndex';
 // CartShow will match with container/webpack.config.js/remotes
-import 'cart/CartShow';
+import { mount as cartMount } from 'cart/CartShow';
 console.log('Container!')
 
-mount(document.querySelector('#my-products'))
+productsMount(document.querySelector('#my-products'))
+cartMount(document.querySelector('#my-cart'))
